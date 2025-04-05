@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading-container {
+          background-color: maroon;
+          border: 4px solid #fff;
+          border-radius: 12px;
+          padding: 20px;
+          text-align: center;
+          color: white;
+          max-width: 600px;
+          margin: 50px auto;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    
+        .heading-container h1 {
+          margin: 0;
+          font-size: 2.5em;
+          letter-spacing: 1px;
+        }
+        
+        .custom-box {
+      background-color: #fff;
+      border: 2px solid maroon;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 300px;
+      margin: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+    body {
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #121212;
+      color: white;
+    }
+
+    body.light-mode {
+      background-color: white;
+      color: black;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    
+    
+      </style>
+</head>
+<body>
+    <div class="heading-container">
+        <div id="typing-text"></div>
+    <h1></h1>
+      </div>
+      <button class="toggle-btn" onclick="toggleLightMode()">Toggle Light Mode</button>
+
+      <script>
+        const message = "Welcome to exploration of Tirupathi";
+        const speed = 100; // typing speed in milliseconds
+      
+        let i = 0;
+      
+        function typeWriter() {
+          if (i < message.length) {
+            document.getElementById("typing-text").innerHTML += message.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      
+        window.onload = typeWriter;
+        function toggleLightMode() {
+      document.body.classList.toggle('light-mode');
+    }
+      </script>
+       <div class="custom-box">
+        <h2>Tirumala</h2>
+        <img src="god.jpg">
+        <p>best time to visit: devudu deggraki eldaniki epudante enti gani try to  isit on summer</p>
+        <p>things to eat: swam vari prasadam (dorikithe bhatkieyachu ayya tintu)</p>
+        <p>places to stay: padmavath residence is blessing to stay</p>
+       </div>
+       <div class="custom-box">
+        <h2>Tirchanur temple</h2>
+        <img src="trch.jpg">
+        <p>best time to visit: ill not mention time but if u viisit tirumula u should visit tirchanur</p>
+        <p>things to eat: annaprasadam in triichanur</p>
+        <p>plces to stay: unfortunately temple doesnt offer lodges to stay nearby but there will be few in a range of 5km</p>
+       </div>
+</body>
+</html>

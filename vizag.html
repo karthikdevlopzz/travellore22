@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Heading</title>
+  <style>
+    .heading-container {
+      background-color: maroon;
+      border: 4px solid #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      max-width: 600px;
+      margin: 50px auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .heading-container h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+    body {
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #121212;
+      color: white;
+    }
+
+    body.light-mode {
+      background-color: white;
+      color: black;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .custom-box {
+  background-color: #fff;
+  border: 2px solid maroon;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 300px;
+  margin: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleLightMode()">Toggle Light Mode</button>
+  <div class="heading-container">
+    <div id="typing-text"></div>
+<h1></h1>
+  </div>
+  <script>
+    const message = "Welcome to exploration of vizag";
+    const speed = 100; // typing speed in milliseconds
+  
+    let i = 0;
+  
+    function typeWriter() {
+      if (i < message.length) {
+        document.getElementById("typing-text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  
+    window.onload = typeWriter;
+    window.onload = typeWriter;
+        function toggleLightMode() {
+      document.body.classList.toggle('light-mode');}
+  </script>
+  <div class="custom-box">
+    <h2>BEACH ROAD</h2>
+    <p>Best time to visit:evenings</p>
+    <img src="download.jpg">
+    <p>things to eat: muri mixture,cheap ice-creams
+    </p>
+    <p>places to stay: (balsinollu aythe :novotel) ,seaview hotel</p>
+  </div>
+  <div class="custom-box">
+    <h2>ZOOLOZICAL park</h2>
+    <img src="zoo.jpg">
+    <P><u></u>best time to visit: endalo radaniki neku burra undali so evening vastav vaste musesi untadi</u> </P>
+    <p>things to eat: animals food thine alvatu unte adhe thinachu</p>
+    <p>places to stay:jantuvi aythe vale place istaru kakapothe ikkada undalev</p>
+  </div>
+  <div class="custom-box">
+    <h2>kailasagiri</h2>
+    <img src="kaila.jpg">
+    
+    <p>best time to visit:naku telsu nuv inkokari tho elthe thappa ellav ani evening is good for it</p> 
+    <p>things to eat:agh!!akkada tindaniki anni baguntayy so try everything there mainly the flavoured groundnuts </p>
+    <p>places to stay:generaly ikkada stay cheydaniki avvadhu</p>
+    </div>
+    <div class="custom-box">
+        <h2>Simhachalam</h2>
+        <img src="sim4.jpg">
+        <p>best time to visit: devudni  kalvdniki best time endayya its a peace epudanna vellachu </p>
+        <p>things to eat:simhachalam prasadam chaala baguntadi</p>
+        <p>places to stay:gajapati sadan on uphill</p>
+    </div>
+</body>
+</html>
